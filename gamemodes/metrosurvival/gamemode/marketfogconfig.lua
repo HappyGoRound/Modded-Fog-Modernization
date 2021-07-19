@@ -22,7 +22,7 @@ ConfigInfo["MarketFog"].Gameplay.WeatherRainDurationMax = 450
 ConfigInfo["MarketFog"].Gameplay.LostSuitOnDeathFlag = false -- When true, the player's suit is reset back to the one specified.
 ConfigInfo["MarketFog"].Gameplay.DefaultSuitOnDeath = "Grunt" -- Make this the name of the suit that the player equips when they die. If this is invalid then it will be set to the first suit in the apparel list.
 ConfigInfo["MarketFog"].Gameplay.MoneyLostOnDeathFlag = true -- The player loses money when dying
-ConfigInfo["MarketFog"].Gameplay.MoneyLostOnDeathRatio = 0.25 -- Money lost by the player upon death as a fraction. e.g. 0.5 means that the player loses half of their money. 1.0 means they lose all money
+ConfigInfo["MarketFog"].Gameplay.MoneyLostOnDeathRatio = 0.5 -- Money lost by the player upon death as a fraction. e.g. 0.5 means that the player loses half of their money. 1.0 means they lose all money
 ConfigInfo["MarketFog"].Gameplay.WeaponsLostOnDeathFlag = true -- If true, the player drops all their weapons on death.
 ConfigInfo["MarketFog"].Gameplay.KillersStealMoneyFlag = false -- If true, when a player dies, money is stolen from the player and given to the killer. This happens AFTER money is lost on death if that flag is selected.
 ConfigInfo["MarketFog"].Gameplay.KillersStealMoneyRatio = 1.0 -- Money stolen by the killer of a player as a ratio. e.g. 1.0 means that the killer takes all of the players money.
@@ -812,6 +812,56 @@ WeaponInfo = {
 	CritChance = 13, -- A percentage value, 0-100%. The chance of a critical hit.
 }
 table.insert(ConfigInfo["MarketFog"].Weapon, WeaponInfo)
+-- The G3
+WeaponInfo = {
+	WeaponType = "rifle", -- The type of weapon, can be melee, pistol, smg, shotgun, rifle
+	DisplayModelName = "models/weapons/arccw/w_ag63.mdl", -- The icon used to display this weapon in derma menus
+	Name = "arccw_g3a3",
+	DisplayName = "AG63",
+	Spawnable = true, -- If true this weapon will spawn in the world.
+	SpawnProb = 2.0, -- The percentage chance this will spawn in the world. 0 - 100%
+	Buyable = false, -- If true this weapon will be buyable from the shop
+	Description = "Fully automatic heavy calibre battle rifle. Punishing punch.",
+	IsAlien = false, -- A flag that signifies this is an "alien" weapon
+	Craftable = false, -- A flag that signifies this is a craftable weapon
+	AirDroppable = true, -- A flag that signifies that this weapon will appear in air drops.
+	Price = 7000,
+	CritChance = 5, -- A percentage value, 0-100%. The chance of a critical hit.
+}
+table.insert(ConfigInfo["MarketFog"].Weapon, WeaponInfo)
+-- The Vector
+WeaponInfo = {
+	WeaponType = "smg", -- The type of weapon, can be melee, pistol, smg, shotgun, rifle
+	DisplayModelName = "models/weapons/arccw/w_vector.mdl", -- The icon used to display this weapon in derma menus
+	Name = "arccw_vector",
+	DisplayName = "Shortsword",
+	Spawnable = true, -- If true this weapon will spawn in the world.
+	SpawnProb = 2.0, -- The percentage chance this will spawn in the world. 0 - 100%
+	Buyable = false, -- If true this weapon will be buyable from the shop
+	Description = "Fully automatic heavy calibre battle rifle. Punishing punch.",
+	IsAlien = false, -- A flag that signifies this is an "alien" weapon
+	Craftable = false, -- A flag that signifies this is a craftable weapon
+	AirDroppable = true, -- A flag that signifies that this weapon will appear in air drops.
+	Price = 12500,
+	CritChance = 5, -- A percentage value, 0-100%. The chance of a critical hit.
+}
+table.insert(ConfigInfo["MarketFog"].Weapon, WeaponInfo)
+-- The Makarov
+WeaponInfo = {
+	WeaponType = "pistol", -- The type of weapon, can be melee, pistol, smg, shotgun, rifle
+	DisplayModelName = "models/weapons/arccw/w_pmt.mdl", -- The icon used to display this weapon in derma menus
+	Name = "arccw_makarov",
+	DisplayName = "PM(t) Klassika",
+	Spawnable = true, -- If true this weapon will spawn in the world.
+	Buyable = false, -- If true this weapon will be buyable from the shop
+	Description = "Soviet satelitte state security sidearm.",
+	IsAlien = false, -- A flag that signifies this is an "alien" weapon
+	Craftable = false, -- A flag that signifies this is a craftable weapon
+	AirDroppable = true, -- A flag that signifies that this weapon will appear in air drops.
+	Price = 1500,
+	CritChance = 50, -- A percentage value, 0-100%. The chance of a critical hit.
+}
+table.insert(ConfigInfo["MarketFog"].Weapon, WeaponInfo)
 
 
 -- The Apparel Settings -- Make sure there is always atleast one entry in this list.
@@ -832,19 +882,19 @@ ConfigInfo["MarketFog"].Apparel[1].MaxO2Canisters = 1
 ConfigInfo["MarketFog"].Apparel[2] = {}
 ConfigInfo["MarketFog"].Apparel[2].Name = "Officer"
 ConfigInfo["MarketFog"].Apparel[2].ModelName = "models/player/jackathan/beta/elitepolice.mdl"
-ConfigInfo["MarketFog"].Apparel[2].ShopDisplayModel = "models/player/jackathan/beta/elitepolice.mdl"
+ConfigInfo["MarketFog"].Apparel[1].ShopDisplayModel = "models/player/jackathan/beta/elitepolice.mdl"
 ConfigInfo["MarketFog"].Apparel[2].ShopDesc = "Direct upgrade from grunt armor."
 ConfigInfo["MarketFog"].Apparel[2].Price = 2500
 ConfigInfo["MarketFog"].Apparel[2].MaxArmour = 30
 ConfigInfo["MarketFog"].Apparel[2].MaxMetal = 150
 ConfigInfo["MarketFog"].Apparel[2].MaxCircuits = 20
 ConfigInfo["MarketFog"].Apparel[2].MaxFuel = 6
-ConfigInfo["MarketFog"].Apparel[2].MaxO2Canisters = 2
+ConfigInfo["MarketFog"].Apparel[1].MaxO2Canisters = 2
 -- "Scavenger" Armor.
 ConfigInfo["MarketFog"].Apparel[3] = {}
 ConfigInfo["MarketFog"].Apparel[3].Name = "Scavenger"
 ConfigInfo["MarketFog"].Apparel[3].ModelName = "models/player/combine_soldran.mdl"
-ConfigInfo["MarketFog"].Apparel[3].ShopDisplayModel = "models/player/combine_soldran.mdl"
+ConfigInfo["MarketFog"].Apparel[1].ShopDisplayModel = "models/player/combine_soldran.mdl"
 ConfigInfo["MarketFog"].Apparel[3].ShopDesc = "Okay armour and okay carrying capacity."
 ConfigInfo["MarketFog"].Apparel[3].Price = 5000
 ConfigInfo["MarketFog"].Apparel[3].MaxArmour = 30
@@ -855,8 +905,8 @@ ConfigInfo["MarketFog"].Apparel[3].MaxO2Canisters = 2
 -- "Packmule" Armor.
 ConfigInfo["MarketFog"].Apparel[4] = {}
 ConfigInfo["MarketFog"].Apparel[4].Name = "Packmule"
-ConfigInfo["MarketFog"].Apparel[4].ModelName = "models/player/jackathan/beta/combine_soldier_2003.mdl"
-ConfigInfo["MarketFog"].Apparel[4].ShopDisplayModel = "models/player/jackathan/beta/combine_soldier_2003.mdl"
+ConfigInfo["MarketFog"].Apparel[4].ModelName = "models/player/jackathan/beta/combine_soldier_3003.mdl"
+ConfigInfo["MarketFog"].Apparel[1].ShopDisplayModel = "models/player/jackathan/beta/combine_soldier_3003.mdl"
 ConfigInfo["MarketFog"].Apparel[4].ShopDesc = "Trades off armor for carrying space."
 ConfigInfo["MarketFog"].Apparel[4].Price = 6500
 ConfigInfo["MarketFog"].Apparel[4].MaxArmour = 10
@@ -868,7 +918,7 @@ ConfigInfo["MarketFog"].Apparel[4].MaxO3Canisters = 4
 ConfigInfo["MarketFog"].Apparel[5] = {}
 ConfigInfo["MarketFog"].Apparel[5].Name = "Ranger"
 ConfigInfo["MarketFog"].Apparel[5].ModelName = "models/player/combine_soldur2.mdl"
-ConfigInfo["MarketFog"].Apparel[5].ShopDisplayModel = "models/player/combine_soldur2.mdl"
+ConfigInfo["MarketFog"].Apparel[1].ShopDisplayModel = "models/player/combine_soldur2.mdl"
 ConfigInfo["MarketFog"].Apparel[5].ShopDesc = "A good amount of armour and good carrying capacity."
 ConfigInfo["MarketFog"].Apparel[5].Price = 11000
 ConfigInfo["MarketFog"].Apparel[5].MaxArmour = 50
