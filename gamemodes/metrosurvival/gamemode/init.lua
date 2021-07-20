@@ -50,7 +50,7 @@ resource.AddWorkshop(2131057232) -- arc base
 resource.AddWorkshop(2131058270) -- arc m9k extras
 resource.AddWorkshop(1519864281) -- minibosses
 resource.AddWorkshop(378014558) -- metro 2033
-resource.AddWorkshop(155092389) -- the horrible post processing plugin THAT IS FROM 2013 LOL
+--resource.AddWorkshop(155092389) -- the horrible post processing plugin THAT IS FROM 2013 LOL (causes too many issues for now)
 resource.AddWorkshop(151539013) -- city ruins
 resource.AddWorkshop(2131256922) -- arc fesiug
 resource.AddWorkshop(619791481) -- beta models hl2
